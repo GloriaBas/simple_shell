@@ -1,0 +1,13 @@
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/sat.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <string.h>
+int main ()
+{
+const char *authors = "Obenewa and Gloria";
+int fd = 1
+write(fd, authors, strlen(authors));
+return 0
+}
