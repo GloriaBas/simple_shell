@@ -59,6 +59,7 @@ return (1);
 _puts(_getenv(info, "OLDPWD=")), _putchar('\n');
 chdir_ret = /* TODO: what should this be? */
 chdir((dir = _getenv(info, "OLDPWD=")) ? dir : "/");
+{
 else
 chdir_ret = chdir(info->argv[1]);
 if (chdir_ret == -1)
@@ -77,14 +78,10 @@ return (0);
  * * _gohelp - Should change the current directory of the process
  * * @info: Represents structure containing potential arguments
  * * that is used to maintain constant function prototype.
- * *  Return: Always 0
+ * * Return: Always 0
  */
 int _gohelp(info_t *info)
 {
-char **arg_array;
-arg_array = info->argv;
-i_puts("help call works. Function not yet implemented \n");
-if (0)
-_puts(*arg_array); /* temp att_unused workaround */
+_puts("help call works. Function not yet implemented \n");
 return (0);
 }
