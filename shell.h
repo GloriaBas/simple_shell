@@ -169,13 +169,13 @@ char *convert_number(long int, int, int);
 void remove_comments(char *);
 
 /* exitsh.c */
-int _myexit(info_t *);
-int _mycd(info_t *);
-int _myhelp(info_t *);
+int _goexit(info_t *);
+int _gocd(info_t *);
+int _gohelp(info_t *);
 
 /* exitsh1.c */
-int _myhistory(info_t *);
-int _myalias(info_t *);
+int _gohistory(info_t *);
+int _goalias(info_t *);
 
 /* statget.c */
 ssize_t get_input(info_t *);
