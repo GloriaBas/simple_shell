@@ -133,7 +133,7 @@ int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
 char *_strcat(char *, char *);
 
-/* globe_01_str.c */
+/* str_modifiers.c */
 char *_strcpy(char *, char *);
 char *_strdup(const char *);
 void _puts(char *);
