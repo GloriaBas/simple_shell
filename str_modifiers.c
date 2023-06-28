@@ -56,3 +56,22 @@ int _strlen(char *str)
 	}
 	return (len);
 }
+
+/**
+ * _strcat - A function that concatenates two strings
+ * @dest: destination buffer
+ * @src: parameter
+ * Return: pointer to destination buffer
+ */
+
+char *_strcat(char *dest, char *src)
+{
+	char *ret = dest;
+
+	while (*dest)
+		dest++;
+	while (*src)
+		*dest++ = *src++;
+	*dest = *src;
+	return (ret);
+}
