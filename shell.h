@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-<<<<<<< HEAD
 #include <signal.h>
 #include <fcntl.h>
 #include <limits.h>
@@ -146,7 +145,7 @@ int _strlen(char *);
 int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
 char *_strcat(char *, char *);
->>>>>>> 55ac1c4bdfd30daffce1b28fb6e77471fe00da8a
+
 
 /* str_modifiers.c */
 char *_strcpy(char *, char *);
@@ -162,7 +161,7 @@ char *_strchr(char *, char);
 char **strtow(char *, char *);
 char **strtow2(char *, char);
 
-/* globe_resize.c */
+/* globe_memset.c */
 char *_memset(char *, char, unsigned int);
 void ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
