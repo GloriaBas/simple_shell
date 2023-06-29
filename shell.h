@@ -19,6 +19,7 @@ int _strcmp(char *s1, char *s2);
 int _strlen(char *str);
 int _puts(char *str);
 char *read_line(void);
+
 =======
 #include <sys/stat.h>
 #include <limits.h>
