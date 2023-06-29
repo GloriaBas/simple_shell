@@ -47,17 +47,17 @@ return (0);
 
 int _atoi(char *s)
 {
-int b, sign = 1, flag = 0, output;
+int g, sign = 1, flag = 0, output;
 unsigned int result = 0;
-for (b = 0;  s[b] != '\0' && flag != 2; b++)
+for (g = 0;  s[g] != '\0' && flag != 2; g++)
 {
-if (s[b] == '-')
+if (s[g] == '-')
 sign *= -1;
-if (s[b] >= '0' && s[b] <= '9')
+if (s[g] >= '0' && s[g] <= '9')
 {
 flag = 1;
 result *= 10;
-result += (s[b] - '0');
+result += (s[g] - '0');
 else if (flag == 1)
 flag = 2;
 }
