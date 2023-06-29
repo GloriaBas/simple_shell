@@ -7,13 +7,13 @@
  */
 void _eputs(char *str)
 {
-int y = 0;
+int g = 0;
 if (!str)
 return;
-while (str[y] != '\0')
+while (str[g] != '\0')
 {
-_eputchar(str[y]);
-y++;
+_eputchar(str[g]);
+g++;
 }
 }
 
@@ -25,15 +25,15 @@ y++;
  */
 int _eputchar(char c)
 {
-static int y;
+static int g;
 static char buf[WRITE_BUF_SIZE];
-if (c == BUF_FLUSH || y >= WRITE_BUF_SIZE)
+if (c == BUF_FLUSH || g >= WRITE_BUF_SIZE)
 {
-write(2, buf, y);
-y = 0;
+write(2, buf, g);
+g = 0;
 }
 if (c != BUF_FLUSH)
-buf[y++] = c;
+buf[g++] = c;
 return (1);
 }
 
@@ -46,15 +46,15 @@ return (1);
  */
 int _putfd(char c, int fd)
 {
-static int y;
+static int g;
 static char buf[WRITE_BUF_SIZE];
-if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+if (c == BUF_FLUSH || g >= WRITE_BUF_SIZE)
 {
-write(fd, buf, y);
-y = 0;
+write(fd, buf, g);
+g = 0;
 }
 if (c != BUF_FLUSH)
-buf[y++] = c;
+buf[g++] = c;
 return (1);
 }
 
@@ -66,12 +66,12 @@ return (1);
  */
 int _putsfd(char *str, int fd)
 {
-int y = 0;
+int g = 0;
 if (!str)
 return (0);
 while (*str)
 {
-y++ = _putfd(*str++, fd);
+g++ = _putfd(*str++, fd);
 }
-return (y);
+return (g);
 }

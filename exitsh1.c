@@ -80,7 +80,7 @@ return (1);
  */
 int _goalias(info_t *info)
 {
-int x = 0;
+int g = 0;
 char *p = NULL;
 list_t *node = NULL;
 if (info->argc == 1)
@@ -93,13 +93,13 @@ node = node->next;
 }
 return (0);
 }
-for (x = 1; info->argv[x]; x++)
+for (g = 1; info->argv[g]; g++)
 {
-p = _strchr(info->argv[x], '=');
+p = _strchr(info->argv[g], '=');
 if (p)
-set_alias(info, info->argv[x]);
+set_alias(info, info->argv[g]);
 else
-print_alias(node_starts_with(info->alias, info->argv[x], '='));
+print_alias(node_starts_with(info->alias, info->argv[g], '='));
 }
 return (0);
 }

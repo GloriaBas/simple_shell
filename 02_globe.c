@@ -8,16 +8,16 @@
  */
 int _erratoi(char *s)
 {
-int r = 0;
+int g = 0;
 unsigned long int result = 0;
 if (*s == '+')
 s++;  /* TODO: how does this make main return 255? */
-for (r = 0;  s[r] != '\0'; r++)
+for (g = 0;  s[g] != '\0'; g++)
 {
-if (s[r] >= '0' && s[r] <= '9')
+if (s[g] >= '0' && s[g] <= '9')
 {
 result *= 10;
-result += (s[r] - '0');
+result += (s[g] - '0');
 if (result > INT_MAX)
 return (-1);
 }
@@ -55,7 +55,7 @@ _eputs(estr);
 int print_d(int input, int fd)
 {
 int (*__putchar)(char) = _putchar;
-int r, count = 0;
+int g, count = 0;
 unsigned int _abs_, current;
 if (fd == STDERR_FILENO)
 _putchar = _eputchar;
@@ -68,14 +68,14 @@ count++;
 else
 _abs_ = input;
 current = _abs_;
-for (r = 1000000000; r > 1; r /= 10)
+for (g = 1000000000; g > 1; g /= 10)
 {
-if (_abs_ / r)
+if (_abs_ / g)
 {
-_putchar('0' + current / r);
+_putchar('0' + current / g);
 count++;
 }
-current %= r;
+current %= g;
 _putchar('0' + current);
 count++;
 return (count);
@@ -120,9 +120,9 @@ return (ptr);
  */
 void remove_comments(char *buf)
 {
-int r;
-for (r = 0; buf[r] != '\0'; r++)
-if (buf[r] == '#' && (!r || buf[r - 1] == ' '))
+int g;
+for (g = 0; buf[g] != '\0'; g++)
+if (buf[g] == '#' && (!g || buf[g - 1] == ' '))
 {
 buf[r] = '\0';
 break;

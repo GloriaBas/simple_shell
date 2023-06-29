@@ -51,7 +51,7 @@ return (builtin_ret);
  */
 int find_builtin(info_t *info)
 {
-int i, built_in_ret = -1;
+int g, built_in_ret = -1;
 builtin_table builtintbl[] = {
 {"exit", _goexit},
 {"env", _goenv},
@@ -63,11 +63,11 @@ builtin_table builtintbl[] = {
 {"alias", _goalias},
 {NULL, NULL}
 };
-for (i = 0; builtintbl[i].type; i++)
-if (_strcmp(info->argv[0], builtintbl[i].type) == 0)
+for (g = 0; builtintbl[g].type; g++)
+if (_strcmp(info->argv[0], builtintbl[g].type) == 0)
 {
 info->line_count++;
-built_in_ret = builtintbl[i].func(info);
+built_in_ret = builtintbl[g].func(info);
 break;
 }
 return (built_in_ret);
@@ -81,16 +81,16 @@ return (built_in_ret);
 void find_cmd(info_t *info)
 {
 char *path = NULL;
-int i, k;
+int g, w;
 info->path = info->argv[0];
 if (info->linecount_flag == 1)
 {
 info->line_count++;
 info->linecount_flag = 0;
 }
-for (i = 0, k = 0; info->arg[i]; i++)
-if (!is_delim(info->arg[i], " \t\n"))
-k++;
+for (g = 0, w = 0; info->arg[g]; g++)
+if (!is_delim(info->arg[g], " \t\n"))
+w++;
 if (!k)
 return;
 path = find_path(info, _getenv(info, "PATH="), info->argv[0]);

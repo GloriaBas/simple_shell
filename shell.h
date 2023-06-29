@@ -120,7 +120,7 @@ int (*func)(info_t *);
 } builtin_table;
 
 
-/* globe_hsh(sh).c */
+/* globe_sh_hsh.c */
 int hsh(info_t *, char **);
 int find_builtin(info_t *);
 void find_cmd(info_t *);

@@ -59,13 +59,13 @@ return (1);
  */
 int _gounsetenv(info_t *info)
 {
-int q;
+int g;
 if (info->argc == 1)
 {
 _eputs("Very few arguements.\n");
 return (1);
 }
-for (q = 1; q <= info->argc; q++)
+for (g = 1; g <= info->argc; g++)
 _unsetenv(info, info->argv[q]);
 return (0);
 }
@@ -79,9 +79,9 @@ return (0);
 int populate_env_list(info_t *info)
 {
 list_t *node = NULL;
-size_t q;
-for (q = 0; environ[q]; q++)
-add_node_end(&node, environ[q], 0);
+size_t g;
+for (g = 0; environ[g]; g++)
+add_node_end(&node, environ[g], 0);
 info->env = node;
 return (0);
 }
